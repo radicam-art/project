@@ -61,6 +61,7 @@ games and watch it later!!
 
 ### version Infomation!
 ver.1.0 2021.7
+ver.2.0 2021.8 Add python to use database.
 
 ### Japanese info
 このプログラムはハードウェアの使用状況をタスクマネージャー等のように並行的に表示することに加えて、その情報を記録し、また
