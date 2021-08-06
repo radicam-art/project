@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+
+                <h2>Index</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Shares</th>
+                            <th>Price</th>
+                            <th>Sum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for display in display %}
+                        <tr>
+                            <td>{{ display["symbol"] }}</td>
+                            <td>{{ display["shares"] }}</td>
+                            <td>{{ display["price"] }}</td>
+                            <td>{{ display["sum"] }}</td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td><strong>CASH</strong></td>
+                            <td>{{ cash }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+{% endblock %}

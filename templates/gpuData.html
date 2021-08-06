@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    gpu-data
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+
+                <h2>gpuData</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>GPU</th>
+                            <th>GPU usage</th>
+                            <th>Utilization memory</th>
+                            <th>Memory used</th>
+                            <th>Memory Free</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for gpu in gpuData %}
+                        <tr>
+                            <td>{{ gpu["time"] }}</td>
+                            <td>{{ gpu["name"] }}</td>
+                            <td>{{ gpu["utilizationGpu"] }}</td>
+                            <td>{{ gpu["utilizationMem"] }}</td>
+                            <td>{{ gpu["memUsed"] }}</td>
+                            <td>{{ gpu["memFree"] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+{% endblock %}

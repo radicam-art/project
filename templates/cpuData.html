@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    cpu-data
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+
+                <h2>cpuData</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>CPU usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cpu in cpuData %}
+                        <tr>
+                            <td>{{ cpu["time"] }}</td>
+                            <td>{{ cpu["data"] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+{% endblock %}

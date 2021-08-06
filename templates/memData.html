@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    mem-data
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+
+                <h2>memData</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Memory free[MB]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mem in memData %}
+                        <tr>
+                            <td>{{ mem["time"] }}</td>
+                            <td>{{ mem["data"] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+{% endblock %}
